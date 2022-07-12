@@ -1,0 +1,10 @@
+POST https://sea-lion-app-rd2lz.ondigitalocean.app/api/leads
+Content-Type: application/json
+
+{
+  "data":{
+    "Name": "Test name from local",
+    "Email": "test@test.com",
+    "Message": "Some test message from local"
+  }
+}

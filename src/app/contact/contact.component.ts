@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  name = '';
+  email = '';
+  message= '';
+
+  constructor(private cs:CommonService) { }
+
+  resolved(event:any){
+
+  }
+
+  submitLead(){
+    let leaddata = {
+      "data":{
+        "Name": this.name,
+        "Email": this.email,
+        "Message": this.message
+      }
+    }
+    this.cs.postLead(leaddata).subscribe( res => {
+      console.log(res);
+    })
+  }
 
   ngOnInit(): void {
   }

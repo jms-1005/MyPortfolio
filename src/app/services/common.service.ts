@@ -15,4 +15,8 @@ export class CommonService {
     return this.http.get<HomePage>(this.url + '/api/about-me?populate=deep,3');
   }
 
+  postLead(data:any){
+    return this.http.post(this.url + '/api/leads', data);
+  }
+
 }

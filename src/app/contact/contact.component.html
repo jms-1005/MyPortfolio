@@ -1,1 +1,17 @@
-<p>contact works!</p>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input [(ngModel)]="name" type="text" class="form-control" id="name" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input [(ngModel)]="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea [(ngModel)]="message" class="form-control" id="message" rows="3"></textarea>
+  </div>
+  <re-captcha (resolved)="resolved($event)" siteKey="6Le0PucgAAAAADO2__lenZEQXBU_Z8JgC-biQtTW"></re-captcha>
+  <button type="submit" class="btn btn-primary" (click)="submitLead()">Submit</button>
+
