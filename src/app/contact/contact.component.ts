@@ -11,11 +11,15 @@ export class ContactComponent implements OnInit {
   name = '';
   email = '';
   message= '';
+  formInvalid = true;
 
   constructor(private cs:CommonService) { }
 
   resolved(event:any){
-
+    //console.log(event);
+    if(event){
+      this.formInvalid = false;
+    }
   }
 
   submitLead(){

@@ -13,5 +13,5 @@
     <textarea [(ngModel)]="message" class="form-control" id="message" rows="3"></textarea>
   </div>
   <re-captcha (resolved)="resolved($event)" siteKey="6Le0PucgAAAAADO2__lenZEQXBU_Z8JgC-biQtTW"></re-captcha>
-  <button type="submit" class="btn btn-primary" (click)="submitLead()">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="submitLead()" [disabled]="formInvalid">Submit</button>
 
