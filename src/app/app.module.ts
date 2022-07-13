@@ -13,6 +13,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { FormsModule } from '@angular/forms';
+import { MyskillsComponent } from './myskills/myskills.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     ProjectDetailsComponent,
     FooterComponent,
-    SocialComponent
+    SocialComponent,
+    MyskillsComponent
   ],
   imports: [
     BrowserModule,

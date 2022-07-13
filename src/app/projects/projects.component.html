@@ -1,1 +1,17 @@
-<p>projects works!</p>
+<div class="projectContainer">
+
+  <div class="project"  *ngFor="let project of projects">
+    <h2>{{ project.attributes.Title }}</h2>
+    <p>{{ project.attributes.Summary }}</p>
+    <div class="skillsContainer">
+      <ul>
+        <li class="skill" *ngFor="let skill of project.attributes.skills.data">
+          <!-- {{ skill | json }} -->
+          <img [src]="server + skill.attributes.SkillLogo.data.attributes.formats.thumbnail.url">
+        </li>
+      </ul>
+    </div>
+    <a [routerLink]="[ '/projects', project.id, project.attributes.Slug]">More details...</a>
+  </div>
+
+</div>

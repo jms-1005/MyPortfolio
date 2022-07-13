@@ -8,3 +8,9 @@ Content-Type: application/json
     "Message": "Some test message from local"
   }
 }
+
+###
+GET https://sea-lion-app-rd2lz.ondigitalocean.app/api/skills?populate=deep,2
+
+###
+GET https://sea-lion-app-rd2lz.ondigitalocean.app/api/projects?populate=deep,3

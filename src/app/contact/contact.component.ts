@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   email = '';
   message= '';
   formInvalid = true;
+  formMessageHidden = true;
 
   constructor(private cs:CommonService) { }
 
@@ -23,6 +24,7 @@ export class ContactComponent implements OnInit {
   }
 
   submitLead(){
+    this.formInvalid = true;
     let leaddata = {
       "data":{
         "Name": this.name,
@@ -32,6 +34,8 @@ export class ContactComponent implements OnInit {
     }
     this.cs.postLead(leaddata).subscribe( res => {
       console.log(res);
+      this.formMessageHidden = false;
+
     })
   }
 
